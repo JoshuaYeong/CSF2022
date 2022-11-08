@@ -1,0 +1,17 @@
+<h2>{{ book.title }}</h2>
+
+<table>
+  <tr>
+    <td><img [src]="book.imageUrl" alt=""></td>
+    <td>
+      Description: {{ book.description }}<p></p>
+      Authors: {{ book.authors }}<p></p>
+      Pages: {{ book.pages }}<p></p>
+      Rating: {{ book.rating }}
+    </td>
+  </tr>
+</table>
+
+<p>
+  <button type="button" [routerLink]="[ '/' ]">Back to List</button>
+</p>

@@ -1,0 +1,19 @@
+<h1>My First SPA</h1>
+
+<div>
+
+  <div class="black-box">
+    <a [routerLink]="[ '/' ]">Home</a>
+    <a [routerLink]="[ '/', 'dog' ]">Dog</a>
+    <a [routerLink]="[ '/cat' ]">Cat</a>
+    <button type="button" [routerLink]="[ '/cat' ]">Cat</button>
+    <button type="button" (click)="clicked()">Click Me!</button>
+  </div>
+
+</div>
+
+<div class="black-box">
+    <router-outlet></router-outlet>
+</div>
+
+

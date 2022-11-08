@@ -1,0 +1,10 @@
+{
+    "typescript.format.insertSpaceAfterConstructor": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "files.autoSaveDelay": 5000,
+    "files.autoSave": "onFocusChange",
+    "editor.renderFinalNewline": true,
+    "files.insertFinalNewline": false,
+    "files.trimFinalNewlines": false
+}

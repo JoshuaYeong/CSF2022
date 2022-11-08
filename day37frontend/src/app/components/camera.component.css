@@ -1,0 +1,17 @@
+.center-it {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 20vw;
+  height: auto;
+  margin-top: 20px;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}

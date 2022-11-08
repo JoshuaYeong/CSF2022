@@ -1,0 +1,46 @@
+<div>
+    <form [formGroup]="contForm" (ngSubmit)="processForm()">
+        <table class="box-it">
+            <thead>
+                <tr>
+                <th>Add a Contact</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" size="30" formControlName="name">
+                </td>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="text" size="30" formControlName="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mobile:
+                </td>
+                <td>
+                    <input type="text" size="30" formControlName="mobile">
+                </td>
+            </tr>
+
+            <div>
+
+            </div>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" [disabled]="contForm.invalid" (click)="addContact()">Add</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>

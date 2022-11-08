@@ -1,0 +1,14 @@
+<table>
+  <tr>
+      <td>
+          <button type="button">Add</button>
+      </td>
+      <td>
+          <button type="button">List</button>
+      </td>
+  </tr>
+</table>
+
+<app-contact (onNewContact)="processNewContact($event)"></app-contact>
+
+<app-list [list]="list" (onDeleteItem)="contactDeleted($event)"></app-list>

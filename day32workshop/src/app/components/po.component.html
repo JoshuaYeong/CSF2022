@@ -1,0 +1,23 @@
+<h2>Purchase Order</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>orderId</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of orderIds">
+      <td>
+        <code>{{ orders[i].orderId }}</code>
+      </td>
+      <td>
+        {{ orders[i].name }}
+      </td>
+      <td>
+        <button type="button">Update</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

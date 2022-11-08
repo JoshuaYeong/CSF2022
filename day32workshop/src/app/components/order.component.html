@@ -1,0 +1,91 @@
+<h2>Order</h2>
+
+<form [formGroup]="form" (ngSubmit)="processForm()">
+  <table>
+    <div>
+      <tr>
+        <td>Name:</td>
+        <td>
+          <input
+            type="text"
+            id="name"
+            size="30"
+            placeholder="Your Name"
+            formControlName="name"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Mobile:</td>
+        <td>
+          <input
+            type="text"
+            id="mobile"
+            size="30"
+            placeholder="Your Mobile"
+            formControlName="mobile"
+          />
+        </td>
+      </tr>
+    </div>
+    <div>
+      <tr>
+        <td>
+          Name has error: {{ form.get("name")!.hasError("required") }}, Mobile
+          has error: {{ form.get("mobile")!.hasError("required") }}
+        </td>
+      </tr>
+    </div>
+    <div>
+      <tr>
+        <td>
+          <button type="submit" [disabled]="form.invalid">Save</button>
+        </td>
+        <td></td>
+        <td>
+          <button type="button" (click)="addItem()">Add</button>
+        </td>
+      </tr>
+    </div>
+  </table>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody formArrayName="items">
+        <tr
+          *ngFor="let li of lineItems.controls"
+          let
+          i="index"
+          [formGroup]="li"
+        >
+          <td>
+            <input type="text" value="apple" formControlName="item" />
+          </td>
+          <td>
+            <select formControlName="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </td>
+          <td>
+            <button type="button" (click)="removeItem(i)">X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

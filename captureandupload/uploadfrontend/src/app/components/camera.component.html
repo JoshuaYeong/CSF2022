@@ -1,0 +1,19 @@
+<div class="center-it">
+
+  <div class="center-2">
+    <webcam [width]="width" [trigger]="snapObs" (imageCapture)="snapshot($event)">
+    </webcam>
+  </div>
+
+  <div class="space-evenly">
+    <button type="button" (click)="capture()" mat-raised-button color="primary">
+      Capture
+      <mat-icon>photo_camera</mat-icon>
+    </button>
+  </div>
+
+  <div class="space-around">
+    <img [src]="captureImage" class="thumbnail">
+  </div>
+
+</div>

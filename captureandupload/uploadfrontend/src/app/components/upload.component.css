@@ -1,0 +1,13 @@
+.img-30wv {
+  width: 30vw;
+}
+
+.center-2 {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.example-card {
+  max-width: 500px;
+}

@@ -1,0 +1,26 @@
+<div class="center-it">
+  <webcam [width]="width" [trigger]="snapObs" (imageCapture)="handleImage($event)" (initError)="handleInitError($event)"
+    *ngIf="showWebcam">
+  </webcam>
+  <div class="space-around">
+    <button mat-raised-button color="warn" (click)="toggleWebcam()">
+      Toggle Webcam
+      <mat-icon>videocam</mat-icon>
+    </button>
+  </div>
+  <div class="space-around">
+    <button mat-raised-button color="primary" (click)="takeSnapshot()">
+      Take a Snapshot!
+      <mat-icon>photo_camera</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="webcamImage">
+    <img [src]="webcamImage" class="thumbnail">
+  </div>
+
+  <h4 *ngIf="errors.length > 0">Messages:</h4>
+  <ul *ngFor="let error of errors">
+    <li>{{error | json}}</li>
+  </ul>
+</div>

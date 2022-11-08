@@ -1,0 +1,18 @@
+
+<div>
+  <img [src]="imageData" [width]="imageWidth">
+</div>
+
+<form [formGroup]="form" (ngSubmit)="shareIt()">
+
+  <label for="title">Title</label>
+  <input type="text" id="title" placeholder="Title" formControlName="title">
+
+  <label for="caption">Caption</label>
+  <textarea id="caption" cols="30" rows="4" formControlName="caption"></textarea>
+
+  <button type="button" [routerLink]="['/']">Cancel</button>
+  <button type="submit">Share</button>
+
+</form>
+

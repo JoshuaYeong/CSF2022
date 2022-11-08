@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <div>
+            <td>
+                <app-order (onNewOrder)="processNewOrder($event)"></app-order>
+            </td>
+        </div>
+            <td></td>
+        <div>
+            <td>
+                <app-po [version]="version"></app-po>
+            </td>
+        </div>
+    </tr>
+</table>
